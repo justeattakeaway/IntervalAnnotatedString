@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">IntervalAnnotatedString</string>
+    <string name="title_activity_playground">PlaygroundActivity</string>
 </resources>
