@@ -2,6 +2,8 @@ package com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme
 
 import androidx.compose.ui.graphics.Color
 
+val JetBrand = Color(0xFFFF8000)
+
 val Purple80 = Color(0xFFD0BCFF)
 val PurpleGrey80 = Color(0xFFCCC2DC)
 val Pink80 = Color(0xFFEFB8C8)
