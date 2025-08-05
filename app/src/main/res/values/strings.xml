@@ -1,4 +1,31 @@
 <resources>
-    <string name="app_name">IntervalAnnotatedString</string>
-    <string name="title_activity_playground">PlaygroundActivity</string>
+    <string name="app_name">Interval Annotated String</string>
+
+    <string name="main_screen_navigation_preview">Preview</string>
+    <string name="main_screen_navigation_examples">Examples</string>
+
+    <string name="main_screen_playground_input_field">Start typing to see compiled string:</string>
+
+    <string name="samples_content_show_code_button">Raw string</string>
+
+    <string-array name="main_screen_samples_content_examples">
+        <item>Check out [our tech blog](link-techblog) for more wonderful articles.</item>
+        <item>Want to know more about [Interval Annotated String](color-jet)? See [our tech blog article](link-interval-annotated-string-article).</item>
+        <item>This is a [bold](bold) statement.</item>
+        <item>Please do not [strikethrough](strikethrough) the old text.</item>
+        <item>The answer is [right here](underline).</item>
+        <item>This item is [highlighted in yellow](highlight-yellow) for a reason.</item>
+        <item>[Just Eat](color-jet) is everywhere.</item>
+        <item>I am looking for a [red shirt](color-red).</item>
+        <item>My favorite color is [green](color-green).</item>
+        <item>The sky is [blue](color-blue).</item>
+        <item>The sign says, \"[stop](color-red) and [go](color-green).\"</item>
+        <item>[This whole paragraph is centered.](align-center) While the rest is not!</item>
+        <item>You can find it in a [manila folder](color-manila).</item>
+        <item>[Highlights in red](highlight-red) are urgent!</item>
+        <item>The following portion of the text is [italic](italic).</item>
+        <item>[Write an email](link-email) to spread the word about Interval Annotated String library release.</item>
+        <item>This text can trigger [opening camera](link-camera).</item>
+        <item>[Share](link-share) the library.</item>
+    </string-array>
 </resources>
