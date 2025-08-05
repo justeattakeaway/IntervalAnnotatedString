@@ -45,7 +45,7 @@ internal fun MainScreen(
                                 context = context,
                                 url = "https://github.com/justeattakeaway/IntervalAnnotatedString"
                             )
-                        }) { Icon(Icons.Rounded.Star, contentDescription = null) }
+                        }) { Icon(Icons.Rounded.Star, contentDescription = "Open Github repository") }
                     }
                 )
             },
