@@ -1,0 +1,73 @@
+public final class com/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser {
+	public static final field $stable I
+	public static final field INSTANCE Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser;
+	public final fun parseMetadata (Ljava/lang/String;)Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$ParsingResult;
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$EmptyInlineTextException : java/lang/RuntimeException {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;I)V
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$InlineInterval {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;II)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()I
+	public final fun component3 ()I
+	public final fun copy (Ljava/lang/String;II)Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$InlineInterval;
+	public static synthetic fun copy$default (Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$InlineInterval;Ljava/lang/String;IIILjava/lang/Object;)Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$InlineInterval;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getId ()Ljava/lang/String;
+	public final fun getLength ()I
+	public final fun getStartsAt ()I
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$NoIdException : java/lang/RuntimeException {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;I)V
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$ParsingResult {
+	public static final field $stable I
+	public fun <init> (Ljava/lang/String;Ljava/util/Collection;)V
+	public final fun component1 ()Ljava/lang/String;
+	public final fun component2 ()Ljava/util/Collection;
+	public final fun copy (Ljava/lang/String;Ljava/util/Collection;)Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$ParsingResult;
+	public static synthetic fun copy$default (Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$ParsingResult;Ljava/lang/String;Ljava/util/Collection;ILjava/lang/Object;)Lcom/justeattakeaway/intervalannotatedstring/InlineIntervalSyntaxParser$ParsingResult;
+	public fun equals (Ljava/lang/Object;)Z
+	public final fun getClearedText ()Ljava/lang/String;
+	public final fun getIntervals ()Ljava/util/Collection;
+	public fun hashCode ()I
+	public fun toString ()Ljava/lang/String;
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/IntervalAnnotatedString {
+	public static final synthetic fun box-impl (Ljava/lang/String;)Lcom/justeattakeaway/intervalannotatedstring/IntervalAnnotatedString;
+	public static fun constructor-impl (Ljava/lang/String;)Ljava/lang/String;
+	public fun equals (Ljava/lang/Object;)Z
+	public static fun equals-impl (Ljava/lang/String;Ljava/lang/Object;)Z
+	public static final fun equals-impl0 (Ljava/lang/String;Ljava/lang/String;)Z
+	public final fun getRawString ()Ljava/lang/String;
+	public fun hashCode ()I
+	public static fun hashCode-impl (Ljava/lang/String;)I
+	public fun toString ()Ljava/lang/String;
+	public static fun toString-impl (Ljava/lang/String;)Ljava/lang/String;
+	public static final fun transform-impl (Ljava/lang/String;Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function4;)Ljava/lang/Object;
+	public final synthetic fun unbox-impl ()Ljava/lang/String;
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/IntervalAnnotatedStringExtsKt {
+	public static final fun asAnnotatedString-QpJNx2M (Ljava/lang/String;Lkotlin/jvm/functions/Function4;)Landroidx/compose/ui/text/AnnotatedString;
+}
+
+public final class com/justeattakeaway/intervalannotatedstring/IntervalAnnotatedStringFactoryKt {
+	public static final fun intervalAnnotatedString (ILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+	public static final fun intervalAnnotatedString (I[Ljava/lang/Object;Landroidx/compose/runtime/Composer;I)Ljava/lang/String;
+	public static final fun intervalAnnotatedString (Ljava/lang/String;Landroidx/compose/runtime/Composer;I)Ljava/lang/String;
+	public static final fun pluralIntervalAnnotatedString (IILandroidx/compose/runtime/Composer;I)Ljava/lang/String;
+	public static final fun pluralIntervalAnnotatedString (II[Ljava/lang/Object;Landroidx/compose/runtime/Composer;I)Ljava/lang/String;
+}
+

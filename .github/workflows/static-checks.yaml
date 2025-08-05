@@ -33,6 +33,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
+      - name: Run ABI Check
+        run: ./gradlew apiCheck
+
       - name: Run Android Linter
         run: ./gradlew lint
 
