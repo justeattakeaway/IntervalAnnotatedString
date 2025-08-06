@@ -1,12 +1,14 @@
 <resources>
     <string name="app_name">Interval Annotated String</string>
 
-    <string name="main_screen_navigation_preview">Preview</string>
-    <string name="main_screen_navigation_examples">Examples</string>
+    <string name="main_screen_navigation_preview">Sandbox</string>
+    <string name="main_screen_navigation_examples">Samples</string>
 
     <string name="main_screen_playground_input_field">Start typing to see compiled string:</string>
 
     <string name="samples_content_show_code_button">Raw string</string>
+
+    <string name="careers_promotion_card_text">Want to come work with us at Just Eat Takeaway.com? [Check out our open roles.](1)</string>
 
     <string-array name="main_screen_samples_content_examples">
         <item>Check out [our tech blog](link-techblog) for more wonderful articles.</item>

@@ -7,6 +7,7 @@ import androidx.compose.foundation.gestures.waitForUpOrCancellation
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.IntrinsicSize
@@ -56,8 +57,10 @@ internal fun SamplesContent(
     items: Array<String> = stringArrayResource(R.array.main_screen_samples_content_examples),
 ) {
     Column(
+        verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = modifier
-            .verticalScroll(rememberScrollState()),
+            .verticalScroll(rememberScrollState())
+            .padding(12.dp, 8.dp),
     ) {
         for (item in items) {
             SampleContentItem(
@@ -95,8 +98,7 @@ private fun SampleContentItemStateless(
     val interactionSource = remember { MutableInteractionSource() }
 
     Card(
-        modifier = modifier
-            .padding(2.dp),
+        modifier = modifier,
     ) {
         Row(
             verticalAlignment = Alignment.CenterVertically,
