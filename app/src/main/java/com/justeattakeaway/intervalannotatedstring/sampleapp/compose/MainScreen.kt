@@ -12,17 +12,24 @@ import androidx.compose.material3.IconButton
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.unit.dp
 import com.justeattakeaway.intervalannotatedstring.sampleapp.R
+import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.Colors
 import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
 import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
 
@@ -45,8 +52,17 @@ internal fun MainScreen(
                                 context = context,
                                 url = "https://github.com/justeattakeaway/IntervalAnnotatedString"
                             )
-                        }) { Icon(Icons.Rounded.Star, contentDescription = "Open Github repository") }
-                    }
+                        }) { Icon(Icons.Rounded.Star, contentDescription = null) }
+                    },
+                    colors = TopAppBarDefaults.topAppBarColors(
+                        actionIconContentColor = Colors.jetBrand,
+                    ),
+                    modifier = Modifier
+                        .shadow(
+                            elevation = 8.dp,
+                            shape = RectangleShape,
+                            clip = false,
+                        )
                 )
             },
             bottomBar = {
@@ -54,37 +70,36 @@ internal fun MainScreen(
                     NavigationBarItem(
                         selected = currentRoute == Routes.PLAYGROUND,
                         onClick = { currentRoute = Routes.PLAYGROUND },
-                        icon = { Icon(Icons.Rounded.Preview, contentDescription = null) },
+                        icon = { Icon(painterResource(R.drawable.ic_playground_24px), contentDescription = null) },
                         label = { Text(stringResource(R.string.main_screen_navigation_preview)) },
                     )
                     NavigationBarItem(
                         selected = currentRoute == Routes.SAMPLES,
                         onClick = { currentRoute = Routes.SAMPLES },
-                        icon = {
-                            Icon(
-                                Icons.AutoMirrored.Rounded.List,
-                                contentDescription = "Localized description"
-                            )
-                        },
+                        icon = { Icon(painterResource(R.drawable.ic_lab_panel_24px), contentDescription = null) },
                         label = { Text(stringResource(R.string.main_screen_navigation_examples)) },
                     )
                 }
             },
             modifier = modifier.fillMaxSize(),
         ) { innerPadding ->
-            when (currentRoute) {
-                Routes.PLAYGROUND -> PlaygroundContent(
-                    modifier =
-                        Modifier
-                            .padding(innerPadding)
-                            .fillMaxSize()
-                )
+            Surface(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(innerPadding),
+            ) {
+                when (currentRoute) {
+                    Routes.PLAYGROUND -> PlaygroundContent(
+                        modifier =
+                            Modifier
+                                .fillMaxSize()
+                    )
 
-                Routes.SAMPLES -> SamplesContent(
-                    modifier = Modifier
-                        .padding(innerPadding)
-                        .fillMaxSize()
-                )
+                    Routes.SAMPLES -> SamplesContent(
+                        modifier = Modifier
+                            .fillMaxSize()
+                    )
+                }
             }
         }
     }

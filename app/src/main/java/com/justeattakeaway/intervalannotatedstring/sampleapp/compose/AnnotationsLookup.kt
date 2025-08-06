@@ -10,7 +10,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import com.justeattakeaway.intervalannotatedstring.sampleapp.SampleAppApplication
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.JetBrand
+import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.Colors
 import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openCamera
 import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openEmail
 import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
@@ -24,7 +24,7 @@ internal val annotationsLookup = mapOf(
     "color-red" to SpanStyle(color = Color.Red),
     "color-green" to SpanStyle(color = Color.Green),
     "color-blue" to SpanStyle(color = Color.Blue),
-    "color-jet" to SpanStyle(color = JetBrand),
+    "color-jet" to SpanStyle(color = Colors.jetBrand, fontWeight = FontWeight.Bold),
     "color-manila" to SpanStyle(color = Color(0xFFE7C9A9)),
     "highlight-yellow" to SpanStyle(background = Color.Yellow),
     "highlight-magenta" to SpanStyle(background = Color.Magenta),

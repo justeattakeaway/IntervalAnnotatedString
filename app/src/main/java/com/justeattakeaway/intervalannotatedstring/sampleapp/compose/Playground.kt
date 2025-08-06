@@ -2,11 +2,14 @@ package com.justeattakeaway.intervalannotatedstring.sampleapp.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -46,11 +49,19 @@ fun Playground(
 
         Card(
             colors = CardDefaults.cardColors(
-                containerColor = if (annotatedStringResult.isFailure) Color.Red else Color.Unspecified,
+                contentColor = if (annotatedStringResult.isFailure) {
+                    MaterialTheme.colorScheme.onErrorContainer
+                } else {
+                    Color.Unspecified
+                },
+                containerColor = if (annotatedStringResult.isFailure) {
+                    MaterialTheme.colorScheme.errorContainer
+                } else {
+                    Color.Unspecified
+                },
             ),
             modifier = Modifier
-                .fillMaxWidth()
-                .padding(vertical = 4.dp, horizontal = 8.dp),
+                .fillMaxWidth(),
         ) {
             if (annotatedStringResult.isSuccess) {
                 val annotatedString = annotatedStringResult.getOrThrow()
@@ -60,7 +71,7 @@ fun Playground(
                         text = annotatedString,
                         modifier = Modifier
                             .fillMaxWidth()
-                            .padding(8.dp),
+                            .padding(16.dp, 8.dp),
                     )
                 }
             } else {
@@ -68,10 +79,12 @@ fun Playground(
                     text = annotatedStringResult.exceptionOrNull()?.message ?: "",
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(8.dp),
+                        .padding(16.dp, 8.dp),
                 )
             }
         }
+
+        Spacer(modifier = Modifier.height(16.dp))
 
         OutlinedTextField(
             value = rawText,
@@ -83,9 +96,12 @@ fun Playground(
             onValueChange = { rawText = it },
             modifier = Modifier
                 .fillMaxWidth()
-                .heightIn(min = 96.dp)
-                .padding(8.dp),
+                .heightIn(min = 96.dp),
         )
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        CareersPromotionCard()
     }
 }
 
