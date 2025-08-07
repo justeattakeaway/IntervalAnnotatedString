@@ -23,29 +23,6 @@ with custom spans, such as clickable links or different text styles.
 
 Supports [Compose](https://developer.android.com/compose) out of the box, but is not limited to it.
 
-## Installation
-
-Add the following to your module's build file.
-
-### Kotlin DSL: `build.gradle.kts`
-
-```kotlin
-dependencies {
-    implementation("com.justeattakeaway:interval-annotated-string:x.x.x")
-}
-```
-
-### Groovy: `build.gradle`
-
-```groovy
-dependencies {
-    implementation 'com.justeattakeaway:interval-annotated-string:x.x.x'
-}
-```
-
-> [!NOTE]
-> To get the latest available version see the Maven badge at the top of the page.
-
 ## Usage
 
 ### Anatomy of an Interval Annotated String
