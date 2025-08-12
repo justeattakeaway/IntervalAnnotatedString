@@ -34,6 +34,9 @@ value class IntervalAnnotatedString(
      * The chosen type [T] should generally be constructible from a plain string (via [onTransformText]) and
      * should allow for range-based modifications, styling, or annotations
      * (via [onTransformInterval]) to be useful with this transformation.
+     *
+     * @throws NoIdException if the id subsection is empty
+     * @throws EmptyInlineTextException if the raw text within the interval annotated string area is empty
      */
     @AnyThread
     @CheckResult
