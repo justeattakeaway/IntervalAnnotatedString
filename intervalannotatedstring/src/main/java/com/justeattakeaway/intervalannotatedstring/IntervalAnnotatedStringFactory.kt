@@ -5,8 +5,6 @@ import androidx.annotation.StringRes
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
-import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.EmptyInlineTextException
-import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.NoIdException
 
 /**
  * Creates an [IntervalAnnotatedString] from a [String] instance.
@@ -17,7 +15,6 @@ import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.No
  * @see IntervalAnnotatedString
  */
 @Composable
-@Throws(NoIdException::class, EmptyInlineTextException::class)
 fun intervalAnnotatedString(value: String): IntervalAnnotatedString =
     IntervalAnnotatedString(value)
 
@@ -29,7 +26,6 @@ fun intervalAnnotatedString(value: String): IntervalAnnotatedString =
  * @see IntervalAnnotatedString
  */
 @Composable
-@Throws(NoIdException::class, EmptyInlineTextException::class)
 fun intervalAnnotatedString(@StringRes stringRes: Int): IntervalAnnotatedString =
     IntervalAnnotatedString(stringResource(stringRes))
 
@@ -42,7 +38,6 @@ fun intervalAnnotatedString(@StringRes stringRes: Int): IntervalAnnotatedString 
  * @see IntervalAnnotatedString
  */
 @Composable
-@Throws(NoIdException::class, EmptyInlineTextException::class)
 fun intervalAnnotatedString(@StringRes stringRes: Int, vararg formatArgs: Any): IntervalAnnotatedString =
     IntervalAnnotatedString(stringResource(stringRes, *formatArgs))
 
@@ -55,7 +50,6 @@ fun intervalAnnotatedString(@StringRes stringRes: Int, vararg formatArgs: Any): 
  * @see IntervalAnnotatedString
  */
 @Composable
-@Throws(NoIdException::class, EmptyInlineTextException::class)
 fun pluralIntervalAnnotatedString(@PluralsRes stringRes: Int, count: Int): IntervalAnnotatedString =
     IntervalAnnotatedString(pluralStringResource(stringRes, count))
 
@@ -69,7 +63,6 @@ fun pluralIntervalAnnotatedString(@PluralsRes stringRes: Int, count: Int): Inter
  * @see IntervalAnnotatedString
  */
 @Composable
-@Throws(NoIdException::class, EmptyInlineTextException::class)
 fun pluralIntervalAnnotatedString(
     @PluralsRes stringRes: Int,
     count: Int,
