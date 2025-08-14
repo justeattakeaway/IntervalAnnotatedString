@@ -8,6 +8,12 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.detekt)
     id("maven-publish")
+    alias(libs.plugins.dependency.guard)
+}
+
+dependencyGuard {
+    // Matches the variant that is published.
+    configuration("releaseRuntimeClasspath")
 }
 
 android {
