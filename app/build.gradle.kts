@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.justeattakeaway.intervalannotatedstring.sampleapp"
+    namespace = "com.github.justeattakeaway.intervalannotatedstring.sampleapp"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.justeattakeaway.intervalannotatedstring.sampleapp"
+        applicationId = "com.github.justeattakeaway.intervalannotatedstring.sampleapp"
         minSdk = 21
         targetSdk = 36
         versionCode = 1

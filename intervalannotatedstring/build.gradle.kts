@@ -17,7 +17,7 @@ dependencyGuard {
 }
 
 android {
-    namespace = "com.justeattakeaway.intervalannotatedstring"
+    namespace = "com.github.justeattakeaway.intervalannotatedstring"
     compileSdk = 36
 
     defaultConfig {

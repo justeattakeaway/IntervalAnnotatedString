@@ -1,4 +1,4 @@
-package com.justeattakeaway.intervalannotatedstring.sampleapp.compose
+package com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -26,11 +26,11 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser
-import com.justeattakeaway.intervalannotatedstring.IntervalAnnotatedString
-import com.justeattakeaway.intervalannotatedstring.asAnnotatedString
-import com.justeattakeaway.intervalannotatedstring.sampleapp.R
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
+import com.github.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser
+import com.github.justeattakeaway.intervalannotatedstring.IntervalAnnotatedString
+import com.github.justeattakeaway.intervalannotatedstring.asAnnotatedString
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.R
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
 import kotlin.random.Random
 
 @Composable

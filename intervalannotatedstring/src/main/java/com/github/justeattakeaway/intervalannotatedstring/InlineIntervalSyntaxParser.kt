@@ -1,4 +1,4 @@
-package com.justeattakeaway.intervalannotatedstring
+package com.github.justeattakeaway.intervalannotatedstring
 
 import androidx.annotation.AnyThread
 import androidx.annotation.CheckResult

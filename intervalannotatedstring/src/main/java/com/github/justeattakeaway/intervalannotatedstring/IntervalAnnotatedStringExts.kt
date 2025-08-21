@@ -1,10 +1,10 @@
-package com.justeattakeaway.intervalannotatedstring
+package com.github.justeattakeaway.intervalannotatedstring
 
 import androidx.annotation.AnyThread
 import androidx.annotation.CheckResult
 import androidx.compose.ui.text.AnnotatedString
-import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.EmptyInlineTextException
-import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.NoIdException
+import com.github.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.EmptyInlineTextException
+import com.github.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.NoIdException
 
 /**
  * Converts an interval annotated string instance to AnnotatedString.

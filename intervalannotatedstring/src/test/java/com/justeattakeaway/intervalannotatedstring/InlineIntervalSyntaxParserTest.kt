@@ -1,4 +1,4 @@
-package com.justeattakeaway.intervalannotatedstring
+package com.github.justeattakeaway.intervalannotatedstring
 
 import junitparams.JUnitParamsRunner
 import junitparams.Parameters

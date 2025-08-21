@@ -1,9 +1,6 @@
-package com.justeattakeaway.intervalannotatedstring.sampleapp.compose
+package com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose
 
-import androidx.compose.foundation.gestures.awaitEachGesture
-import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.detectTapGestures
-import androidx.compose.foundation.gestures.waitForUpOrCancellation
 import androidx.compose.foundation.indication
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.PressInteraction
@@ -33,7 +30,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
-import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.res.stringArrayResource
 import androidx.compose.ui.res.stringResource
@@ -46,10 +42,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.justeattakeaway.intervalannotatedstring.asAnnotatedString
-import com.justeattakeaway.intervalannotatedstring.intervalAnnotatedString
-import com.justeattakeaway.intervalannotatedstring.sampleapp.R
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
+import com.github.justeattakeaway.intervalannotatedstring.asAnnotatedString
+import com.github.justeattakeaway.intervalannotatedstring.intervalAnnotatedString
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.R
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
 
 @Composable
 internal fun SamplesContent(

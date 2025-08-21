@@ -1,4 +1,4 @@
-package com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme
+package com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme
 
 import androidx.compose.ui.graphics.Color
 

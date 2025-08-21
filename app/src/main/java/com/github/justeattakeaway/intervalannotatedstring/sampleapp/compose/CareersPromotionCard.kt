@@ -1,4 +1,4 @@
-package com.justeattakeaway.intervalannotatedstring.sampleapp.compose
+package com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -23,11 +23,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.justeattakeaway.intervalannotatedstring.asAnnotatedString
-import com.justeattakeaway.intervalannotatedstring.intervalAnnotatedString
-import com.justeattakeaway.intervalannotatedstring.sampleapp.R
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
-import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
+import com.github.justeattakeaway.intervalannotatedstring.asAnnotatedString
+import com.github.justeattakeaway.intervalannotatedstring.intervalAnnotatedString
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.R
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
 
 private const val URL_ANNOTATION_ID = "1"
 private const val URL_CAREERS_WEBSITE = "https://bit.ly/TechBlogFooter"

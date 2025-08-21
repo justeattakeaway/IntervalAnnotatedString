@@ -1,4 +1,4 @@
-package com.justeattakeaway.intervalannotatedstring.sampleapp.compose
+package com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.LinkAnnotation
@@ -9,12 +9,12 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
-import com.justeattakeaway.intervalannotatedstring.sampleapp.SampleAppApplication
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.Colors
-import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openCamera
-import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openEmail
-import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
-import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.shareText
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.SampleAppApplication
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.Colors
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.utils.openCamera
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.utils.openEmail
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.utils.shareText
 
 internal val annotationsLookup = mapOf(
     "bold" to SpanStyle(fontWeight = FontWeight.Bold),

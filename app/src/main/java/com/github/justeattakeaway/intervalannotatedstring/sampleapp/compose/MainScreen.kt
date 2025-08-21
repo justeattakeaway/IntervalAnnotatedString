@@ -1,10 +1,8 @@
-package com.justeattakeaway.intervalannotatedstring.sampleapp.compose
+package com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.rounded.List
-import androidx.compose.material.icons.rounded.Preview
 import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Icon
@@ -28,10 +26,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.justeattakeaway.intervalannotatedstring.sampleapp.R
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.Colors
-import com.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
-import com.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.R
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.Colors
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.compose.theme.SampleAppTheme
+import com.github.justeattakeaway.intervalannotatedstring.sampleapp.utils.openWebpage
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
