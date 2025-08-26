@@ -37,7 +37,7 @@ jobs:
             ${{ runner.os }}-gradle-
 
       - name: Trigger Gradle publishing task
-        run: ./gradlew publishReleasePublicationToMavenCentralRepository -Ppublish.repo.credentials.username=${{ secrets.MAVEN_CENTRAL_USERNAME }} -Ppublish.repo.credentials.password=${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+        run: ./gradlew publishReleasePublicationToMavenCentralRepository -Ppublish.repo.credentials.username=${{ secrets.MAVEN_CENTRAL_USERNAME }} -Ppublish.repo.credentials.password=${{ secrets.MAVEN_CENTRAL_PASSWORD }} -PsigningInMemoryKey="${{ secrets.SIGNING_IN_MEMORY_KEY }}" -PsigningInMemoryKeyPassword="${{ secrets.SIGNING_IN_MEMORY_KEY_PASSWORD }}"
 
       # More info on this step available at:
       # https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#1-modify-your-ci-script

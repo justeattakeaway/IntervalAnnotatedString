@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.detekt)
     alias(libs.plugins.dependency.guard)
     id("maven-publish")
+    id("signing")
 }
 
 dependencyGuard {
@@ -129,6 +130,19 @@ publishing {
         }
     }
 }
+
+signing {
+    isRequired = false
+    sign(publishing.publications)
+
+    val inMemoryKey = project.findProperty("signingInMemoryKey")?.toString()
+    if (inMemoryKey != null) {
+        val inMemoryKeyId = project.findProperty("signingInMemoryKeyId")?.toString()
+        val inMemoryKeyPassword = project.findProperty("signingInMemoryKeyPassword")?.toString()
+        useInMemoryPgpKeys(inMemoryKeyId, inMemoryKey, inMemoryKeyPassword)
+    }
+}
+
 
 dependencies {
     detektPlugins(libs.detekt.formatting)
