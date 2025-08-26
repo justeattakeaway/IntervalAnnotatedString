@@ -66,9 +66,8 @@ publishing {
             mavenCentral {
                 name = "MavenCentral"
                 credentials {
-                    val localProperties = gradleLocalProperties(project.rootDir, providers)
-                    username = localProperties.getProperty("publish.repo.credentials.userName")
-                    password = localProperties.getProperty("publish.repo.credentials.password")
+                    username = project.findProperty("publish.repo.credentials.username")?.toString()
+                    password = project.findProperty("publish.repo.credentials.password")?.toString()
                 }
             }
         }
