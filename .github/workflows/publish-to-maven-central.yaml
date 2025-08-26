@@ -1,0 +1,40 @@
+name: Publish to Maven Central
+
+on:
+  workflow_dispatch:
+
+permissions: read-all
+
+jobs:
+  publish-to-maven-central:
+    name: Publish to Maven Central
+    continue-on-error: true
+    environment: PublishToMavenCentral
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setting up JDK 17
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'adopt'
+          java-version: '17'
+
+      - name: Cache Gradle and wrapper
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
+      - name: Trigger Gradle publishing task
+        run: ./gradlew publishReleasePublicationToMavenCentralRepository -Ppublish.repo.credentials.username={{ secrets.MAVEN_CENTRAL_USERNAME }} -Ppublish.repo.credentials.password={{ secrets.MAVEN_CENTRAL_PASSWORD }}
