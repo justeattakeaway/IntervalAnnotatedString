@@ -63,18 +63,8 @@ android {
 publishing {
     publications {
         repositories {
-            maven {
-                name = "local"
-                url = uri(layout.buildDirectory.dir("maven-local"))
-            }
-
-            maven {
-                name = "maven-central"
-
-                val releaseUrl = extraProperties.get("publish.repo.releaseUrl").toString()
-                val snapshotUrl = extraProperties.get("publish.repo.snapshotUrl").toString()
-
-                url = uri(if (BuildConfig.isSnapshot) snapshotUrl else releaseUrl)
+            mavenCentral {
+                name = "MavenCentral"
                 credentials {
                     val localProperties = gradleLocalProperties(project.rootDir, providers)
                     username = localProperties.getProperty("publish.repo.credentials.userName")
