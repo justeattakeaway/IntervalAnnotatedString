@@ -2,6 +2,8 @@
 
 # Interval Annotated String
 
+![Maven Central Version](https://img.shields.io/maven-central/v/com.justeattakeaway/interval-annotated-string)
+
 A tiny Android utility library that simplifies the process of creating and managing embedded
 links and styles within a localised text block. It provides a clean, non-disruptive syntax that 
 won't confuse translators, while still allowing you to identify specific parts of a string.
@@ -22,6 +24,29 @@ even back to a simple string! It's especially useful for converting text into to
 with custom spans, such as clickable links or different text styles.
 
 Supports [Compose](https://developer.android.com/compose) out of the box, but is not limited to it.
+
+## Installation
+
+Add the following to your module's build file.
+
+### Kotlin DSL: `build.gradle.kts`
+
+```kotlin
+dependencies {
+    implementation("com.justeattakeaway:interval-annotated-string:x.x.x")
+}
+```
+
+### Groovy: `build.gradle`
+
+```groovy
+dependencies {
+    implementation 'com.justeattakeaway:interval-annotated-string:x.x.x'
+}
+```
+
+> [!NOTE]
+> To get the latest available version see the version badge at the top of this page.
 
 ## Usage
 
