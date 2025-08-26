@@ -38,3 +38,11 @@ jobs:
 
       - name: Trigger Gradle publishing task
         run: ./gradlew publishReleasePublicationToMavenCentralRepository -Ppublish.repo.credentials.username=${{ secrets.MAVEN_CENTRAL_USERNAME }} -Ppublish.repo.credentials.password=${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+
+      # More info on this step available at:
+      # https://central.sonatype.org/publish/publish-portal-ossrh-staging-api/#1-modify-your-ci-script
+      - name: Sync with Maven Central Repository
+        run: |
+          uploadUrl = $(echo "https://ossrh-staging-api.central.sonatype.com/manual/upload/defaultRepository/${{ vars.MAVEN_CENTRAL_NAMESPACE }}")
+          token = $(echo ${{ secrets.MAVEN_CENTRAL_USERNAME }}:${{ secrets.MAVEN_CENTRAL_PASSWORD }} | base64 -i -)
+          curl -X POST $uploadUrl -H "Authorization: Bearer $token"
