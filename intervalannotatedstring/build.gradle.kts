@@ -1,5 +1,4 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 import org.jetbrains.kotlin.gradle.plugin.extraProperties
 
 plugins {
@@ -7,8 +6,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.detekt)
-    id("maven-publish")
     alias(libs.plugins.dependency.guard)
+    id("maven-publish")
 }
 
 dependencyGuard {
@@ -63,8 +62,10 @@ android {
 publishing {
     publications {
         repositories {
-            mavenCentral {
+            maven {
                 name = "MavenCentral"
+                url = uri("https://ossrh-staging-api.central.sonatype.com/service/local/staging/deploy/maven2/")
+
                 credentials {
                     username = project.findProperty("publish.repo.credentials.username")?.toString()
                     password = project.findProperty("publish.repo.credentials.password")?.toString()
@@ -87,6 +88,38 @@ publishing {
                         name = "The Apache License, Version 2.0"
                         url = "http://www.apache.org/licenses/LICENSE-2.0.txt"
                     }
+                }
+
+                developers {
+                    developer {
+                        id = "justeattakeaway"
+                        name = "Just Eat Takeaway.com"
+                        url = "https://github.com/justeattakeaway"
+                    }
+
+                    developer {
+                        id = "st235"
+                        name = "Alex Dadukin"
+                        url = "https://github.com/st235"
+                    }
+
+                    developer {
+                        id = "mezpahlan"
+                        name = "Mez Pahlan"
+                        url = "https://github.com/mezpahlan"
+                    }
+
+                    developer {
+                        id = "jordicollmarin"
+                        name = "Jordi Coll Marin"
+                        url = "https://github.com/jordicollmarin"
+                    }
+                }
+
+                scm {
+                    url = "https://github.com/justeattakeaway/IntervalAnnotatedString"
+                    connection = "https://github.com/justeattakeaway/IntervalAnnotatedString.git"
+                    developerConnection = "https://github.com/justeattakeaway/IntervalAnnotatedString.git"
                 }
             }
 
