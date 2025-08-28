@@ -113,9 +113,7 @@ private fun buildAnnotatedStringPreview(
 
     return try {
         val annotatedString = IntervalAnnotatedString(text)
-            .asAnnotatedString { id, startsAt, length ->
-                val endsAt = startsAt + length
-
+            .asAnnotatedString { id, startsAt, endsAt ->
                 if (!coloursLookup.containsKey(id)) {
                     coloursLookup[id] = Color(
                         Random.nextInt(256),

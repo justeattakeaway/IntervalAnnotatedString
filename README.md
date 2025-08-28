@@ -137,7 +137,7 @@ private inline fun getPrivacyPolicyAnnotatedString(
     privacyPolicy: String,
     crossinline onPrivacyPolicyClick: () -> Unit,
 ) = intervalAnnotatedString(privacyPolicy)
-    .asAnnotatedString { id, startsAt, length ->
+    .asAnnotatedString { id, startsAt, endsAt ->
         if (id == PRIVACY_POLICY_LINK_INTERVAL_ID) {
             addLink(
                 clickable =
@@ -154,7 +154,7 @@ private inline fun getPrivacyPolicyAnnotatedString(
                         linkInteractionListener = { onPrivacyPolicyClick() },
                     ),
                 start = startsAt,
-                end = startsAt + length,
+                end = endsAt,
             )
         }
     }

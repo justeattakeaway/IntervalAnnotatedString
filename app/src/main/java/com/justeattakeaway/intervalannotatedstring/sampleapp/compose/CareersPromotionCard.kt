@@ -59,9 +59,7 @@ fun CareersPromotionCard(
             )
             Text(
                 text = intervalAnnotatedString(R.string.careers_promotion_card_text)
-                    .asAnnotatedString { id, startsAt, length ->
-                        val endsAt = startsAt + length
-
+                    .asAnnotatedString { id, startsAt, endsAt ->
                         if (id == URL_ANNOTATION_ID) {
                             addLink(
                                 clickable = LinkAnnotation.Clickable(
