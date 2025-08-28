@@ -13,7 +13,7 @@ typealias OnTransformText<T> = (text: String) -> T
 /**
  * Applies interval transformation on the target rendering string implementation.
  */
-typealias OnApplyIntervalTransformation<T> = T.(id: String, startsAt: Int, length: Int) -> Unit
+typealias OnApplyIntervalTransformation<T> = T.(id: String, startsAt: Int, endsAt: Int) -> Unit
 
 /**
  * Primary class for working with interval annotated strings.
@@ -48,7 +48,11 @@ value class IntervalAnnotatedString(
         val (clearedText, intervals) = InlineIntervalSyntaxParser.parseMetadata(rawString)
         val outResult = onTransformText(clearedText)
         for (interval in intervals) {
-            outResult.onApplyIntervalTransformation(interval.id, interval.startsAt, interval.length)
+            outResult.onApplyIntervalTransformation(
+                interval.id,
+                interval.startsAt,
+                /* endsAt= */ interval.startsAt + interval.length,
+            )
         }
         return outResult
     }

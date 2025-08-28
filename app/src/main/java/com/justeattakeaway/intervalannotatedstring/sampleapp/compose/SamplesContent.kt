@@ -177,9 +177,7 @@ private fun SampleContentItemRenderingStringViewer(
 ) {
     Text(
         text = intervalAnnotatedString(rawText)
-            .asAnnotatedString { id, startsAt, length ->
-                val endsAt = startsAt + length
-
+            .asAnnotatedString { id, startsAt, endsAt ->
                 val annotation = annotationsLookup[id]
                 when (annotation) {
                     is SpanStyle ->
