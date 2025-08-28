@@ -17,14 +17,14 @@ typealias TestRenderingString = String
 @RunWith(JUnit4::class)
 class IntervalAnnotatedStringTest {
     private val onTransformText = mockk<OnTransformText<TestRenderingString>>()
-    private val onTransformInterval = mockk<OnTransformInterval<TestRenderingString>>()
+    private val onApplyIntervalTransformation = mockk<OnApplyIntervalTransformation<TestRenderingString>>()
 
     @Before
     fun setUp() {
         mockkObject(InlineIntervalSyntaxParser)
 
         every { onTransformText.invoke(any()) } returns TEST_RENDERING_STRING
-        every { onTransformInterval.invoke(any(), any(), any(), any()) } returns Unit
+        every { onApplyIntervalTransformation.invoke(any(), any(), any(), any()) } returns Unit
     }
 
     @SuppressLint("CheckResult")
@@ -39,7 +39,7 @@ class IntervalAnnotatedStringTest {
             )
 
         // When
-        text.transform(onTransformText, onTransformInterval)
+        text.transform(onTransformText, onApplyIntervalTransformation)
 
         // Then
         verify(exactly = 1) { onTransformText.invoke(eq(TEST_INTERVAL_CLEARED_STRING)) }
@@ -57,23 +57,23 @@ class IntervalAnnotatedStringTest {
             )
 
         // When
-        text.transform(onTransformText, onTransformInterval)
+        text.transform(onTransformText, onApplyIntervalTransformation)
 
         // Then
         verify {
-            onTransformInterval.invoke(
+            onApplyIntervalTransformation.invoke(
                 eq(TEST_RENDERING_STRING),
                 eq(TEST_INTERVAL_1.id),
                 eq(TEST_INTERVAL_1.startsAt),
                 eq(TEST_INTERVAL_1.length),
             )
-            onTransformInterval.invoke(
+            onApplyIntervalTransformation.invoke(
                 eq(TEST_RENDERING_STRING),
                 eq(TEST_INTERVAL_2.id),
                 eq(TEST_INTERVAL_2.startsAt),
                 eq(TEST_INTERVAL_2.length),
             )
-            onTransformInterval.invoke(
+            onApplyIntervalTransformation.invoke(
                 eq(TEST_RENDERING_STRING),
                 eq(TEST_INTERVAL_3.id),
                 eq(TEST_INTERVAL_3.startsAt),
