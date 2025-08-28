@@ -65,19 +65,19 @@ class IntervalAnnotatedStringTest {
                 eq(TEST_RENDERING_STRING),
                 eq(TEST_INTERVAL_1.id),
                 eq(TEST_INTERVAL_1.startsAt),
-                eq(TEST_INTERVAL_1.length),
+                eq(TEST_INTERVAL_1.startsAt + TEST_INTERVAL_1.length),
             )
             onApplyIntervalTransformation.invoke(
                 eq(TEST_RENDERING_STRING),
                 eq(TEST_INTERVAL_2.id),
                 eq(TEST_INTERVAL_2.startsAt),
-                eq(TEST_INTERVAL_2.length),
+                eq(TEST_INTERVAL_2.startsAt + TEST_INTERVAL_2.length),
             )
             onApplyIntervalTransformation.invoke(
                 eq(TEST_RENDERING_STRING),
                 eq(TEST_INTERVAL_3.id),
                 eq(TEST_INTERVAL_3.startsAt),
-                eq(TEST_INTERVAL_3.length),
+                eq(TEST_INTERVAL_3.startsAt + TEST_INTERVAL_3.length),
             )
         }
     }

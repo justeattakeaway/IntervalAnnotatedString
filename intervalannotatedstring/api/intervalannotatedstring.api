@@ -61,6 +61,7 @@ public final class com/justeattakeaway/intervalannotatedstring/IntervalAnnotated
 
 public final class com/justeattakeaway/intervalannotatedstring/IntervalAnnotatedStringExtsKt {
 	public static final fun asAnnotatedString-QpJNx2M (Ljava/lang/String;Lkotlin/jvm/functions/Function4;)Landroidx/compose/ui/text/AnnotatedString;
+	public static final fun asSpannableString-QpJNx2M (Ljava/lang/String;Lkotlin/jvm/functions/Function4;)Landroid/text/SpannableString;
 }
 
 public final class com/justeattakeaway/intervalannotatedstring/IntervalAnnotatedStringFactoryKt {

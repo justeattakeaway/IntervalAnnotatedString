@@ -11,7 +11,8 @@ import com.justeattakeaway.intervalannotatedstring.InlineIntervalSyntaxParser.No
 typealias OnTransformText<T> = (text: String) -> T
 
 /**
- * Applies interval transformation on the target rendering string implementation.
+ * Applies interval transformation on the target rendering string implementation at
+ * inclusive startsAt and exclusive endsAt bounds.
  */
 typealias OnApplyIntervalTransformation<T> = T.(id: String, startsAt: Int, endsAt: Int) -> Unit
 
@@ -51,7 +52,7 @@ value class IntervalAnnotatedString(
             outResult.onApplyIntervalTransformation(
                 interval.id,
                 interval.startsAt,
-                /* endsAt= */ interval.startsAt + interval.length,
+                interval.startsAt + interval.length, // endsAt
             )
         }
         return outResult
